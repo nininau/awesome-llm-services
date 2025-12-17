@@ -413,5 +413,30 @@
     "stars": 118075,
     "lastCommit": "2025-12-02",
     "updated_at": "2025-12-17T22:20:32.698Z"
+  },
+  "BerriAI/litellm": {
+    "stars": 32566,
+    "lastCommit": "2025-12-17",
+    "updated_at": "2025-12-17T23:03:15.281Z"
+  },
+  "cloudflare/cloudflared": {
+    "stars": 12356,
+    "lastCommit": "2025-11-21",
+    "updated_at": "2025-12-17T23:03:15.367Z"
+  },
+  "langgenius/dify": {
+    "stars": 122008,
+    "lastCommit": "2025-12-17",
+    "updated_at": "2025-12-17T23:03:15.378Z"
+  },
+  "n8n-io/n8n": {
+    "stars": 163344,
+    "lastCommit": "2025-12-17",
+    "updated_at": "2025-12-17T23:03:15.455Z"
+  },
+  "open-webui/pipelines": {
+    "stars": 2219,
+    "lastCommit": "2025-08-18",
+    "updated_at": "2025-12-17T23:03:15.494Z"
   }
 }

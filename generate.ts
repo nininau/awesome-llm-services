@@ -336,7 +336,11 @@ const getLink = (s: ServiceEntry): string => {
 };
 
 const formatTags = (tags: string[], primaryTag: string): string => {
-  const otherTags = tags.filter(t => t !== primaryTag);
+  const excluded = [
+    HST.partial,
+    HST.builtin,
+  ]
+  const otherTags = tags.filter(t => t !== primaryTag && excluded.indexOf(t) === -1);
   if (otherTags.length === 0) return "";
   return ` \`${otherTags.join("\` \`")}\``;
 };
@@ -355,11 +359,16 @@ const renderService = (s: ServiceEntry, primaryTag?: string): string => {
     if (s.githubStats.lastCommit) {
       parts.push(`${icon("git-commit-horizontal")} ${s.githubStats.lastCommit}`);
     }
+
+    if (tags) {
+      parts.push(tags);
+    }
+
     statsLine = parts.join(" &nbsp; ");
   }
 
   const lines = [
-    `**${link}**${tags}`,
+    `#### **${link}**`,
     statsLine,
     description,
   ].filter(Boolean);
@@ -379,7 +388,52 @@ const uniqueServices = (serviceList: ServiceEntry[]): ServiceEntry[] => {
 const allServices = uniqueServices(services).sort((a, b) => a.name.localeCompare(b.name));
 
 const LUCIDE_CDN = "https://cdn.jsdelivr.net/npm/lucide-static@latest/icons";
-const icon = (name: string, size = 14) => `<img src="${LUCIDE_CDN}/${name}.svg#gh-light-mode-only" width="${size}" height="${size}"><img src="${LUCIDE_CDN}/${name}.svg#gh-dark-mode-only" width="${size}" height="${size}" style="filter: invert(1);">`;
+const ASSETS_DIR = new URL("./assets", import.meta.url).pathname;
+const ICON_COLOR = "#7d8590";
+
+const ICONS_USED = [
+  "star",
+  "git-commit-horizontal",
+  "message-square",
+  "cpu",
+  "satellite",
+  "workflow",
+  "plug",
+  "audio-lines",
+  "terminal",
+  "flask-conical",
+  "wrench",
+  "heart",
+];
+
+async function downloadIcons(): Promise<void> {
+  console.log(`🎨 Downloading ${ICONS_USED.length} icons to ./assets...`);
+
+  await Promise.all(
+    ICONS_USED.map(async (name) => {
+      const response = await fetch(`${LUCIDE_CDN}/${name}.svg`);
+      const svg = await response.text();
+      const colored = svg
+        .replace(/stroke="currentColor"/g, `stroke="${ICON_COLOR}"`)
+        .replace(/fill="currentColor"/g, `fill="${ICON_COLOR}"`);
+
+      const filePath = `${ASSETS_DIR}/${name}.svg`;
+      if (typeof Deno !== "undefined") {
+        await Deno.writeTextFile(filePath, colored);
+      } else {
+        const fs = await import("node:fs/promises");
+        await fs.writeFile(filePath, colored, "utf-8");
+      }
+    })
+  );
+  console.log(`✓ Icons saved to ./assets`);
+}
+
+function icon(name: string, size = 16): string {
+  return `<img src="./assets/${name}.svg" width="${size}" height="${size}" style="vertical-align: middle;">`;
+}
+
+await downloadIcons();
 
 const today = new Date().toISOString().split("T")[0];
 
@@ -417,55 +471,55 @@ A curated list of **${services.length}+** LLM services, tools, and infrastructur
 
 ---
 
-## ${icon("message-square", 24)} Frontends
+## ${icon("message-square")} Frontends
 
 Chat interfaces and web applications for interacting with language models.
 
 ${frontends.map(s => renderService(s, HST.frontend)).join("\n\n")}
 
-## ${icon("cpu", 24)} Backends
+## ${icon("cpu")} Backends
 
 Inference engines and model serving platforms. These power the actual LLM responses.
 
 ${backends.map(s => renderService(s, HST.backend)).join("\n\n")}
 
-## ${icon("satellite", 24)} Satellites
+## ${icon("satellite")} Satellites
 
 Companion services, research tools, and integrations that enhance LLM workflows.
 
 ${uniqueServices(satellites).map(s => renderService(s, HST.satellite)).join("\n\n")}
 
-## ${icon("workflow", 24)} Workflow & Automation
+## ${icon("workflow")} Workflow & Automation
 
 Visual programming, workflow automation, and orchestration platforms for building LLM applications.
 
 ${uniqueServices(workflowTools).map(s => renderService(s, HST.workflows)).join("\n\n")}
 
-## ${icon("plug", 24)} API & Proxies
+## ${icon("plug")} API & Proxies
 
 API gateways, proxies, and aggregation services for managing multiple LLM endpoints.
 
 ${uniqueServices(apiServices).map(s => renderService(s, HST.api)).join("\n\n")}
 
-## ${icon("audio-lines", 24)} Audio & Speech
+## ${icon("audio-lines")} Audio & Speech
 
 Text-to-speech (TTS), speech-to-text (STT), and audio processing services.
 
 ${uniqueServices(audioServices).map(s => renderService(s, HST.audio)).join("\n\n")}
 
-## ${icon("terminal", 24)} CLI Tools
+## ${icon("terminal")} CLI Tools
 
 Command-line interfaces and terminal-based tools for LLM interaction.
 
 ${uniqueServices(cliTools).map(s => renderService(s, HST.cli)).join("\n\n")}
 
-## ${icon("flask-conical", 24)} Evaluation
+## ${icon("flask-conical")} Evaluation
 
 Benchmarking, evaluation, and testing tools for measuring LLM performance.
 
 ${uniqueServices(evalTools).map(s => renderService(s, HST.eval)).join("\n\n")}
 
-## ${icon("wrench", 24)} MCP Tools
+## ${icon("wrench")} MCP Tools
 
 Model Context Protocol servers and tool integration services.
 
@@ -476,7 +530,7 @@ ${uniqueServices(mcpTools).map(s => renderService(s, HST.tools)).join("\n\n")}
 This list is auto-generated from [Harbor's service metadata](https://github.com/av/harbor).
 
 <p align="center">
-  Made with <img src="${LUCIDE_CDN}/heart.svg" width="14" height="14" style="vertical-align: middle;"> by the <a href="https://github.com/av/harbor">Harbor</a> community
+  Made with ${icon("heart")} by the <a href="https://github.com/av/harbor">Harbor</a> community
 </p>
 `;
 
