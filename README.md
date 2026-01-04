@@ -4,13 +4,13 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-  <img src="https://img.shields.io/badge/services-104%2B-blue" alt="Services">
+  <img src="https://img.shields.io/badge/services-106%2B-blue" alt="Services">
   <a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fav%2Fawesome-llm-services"><img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fav%2Fawesome-llm-services&countColor=%23263759&style=flat" /></a>
   <a href="https://discord.gg/8nDRphrhSF"><img src="https://img.shields.io/badge/Discord-Harbor-blue?logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://github.com/av/harbor"><img src="https://img.shields.io/badge/av-Harbor-black.svg" alt="av/harbor repo link"></a>
 </p>
 
-A list of **104+** LLM services, tools, and infrastructure for running AI locally. Criteria for inclusion:
+A list of **106+** LLM services, tools, and infrastructure for running AI locally. Criteria for inclusion:
 - Open Source
 - Self-hostable
 - Friendly to containerization (Docker, Podman, etc.)
@@ -23,8 +23,8 @@ Relevance score (<img src="./assets/rocket.svg" width="16" height="16" style="ve
 
 - [<img src="./assets/message-square.svg" width="16" height="16" style="vertical-align: middle;"> Frontends](#-frontends) - Chat interfaces and web UIs (17)
 - [<img src="./assets/cpu.svg" width="16" height="16" style="vertical-align: middle;"> Backends](#-backends) - Inference engines and model servers (17)
-- [<img src="./assets/satellite.svg" width="16" height="16" style="vertical-align: middle;"> Satellites](#-satellites) - Companion services and integrations (65)
-- [<img src="./assets/workflow.svg" width="16" height="16" style="vertical-align: middle;"> Workflow & Automation](#-workflow--automation) - Visual programming platforms (10)
+- [<img src="./assets/satellite.svg" width="16" height="16" style="vertical-align: middle;"> Satellites](#-satellites) - Companion services and integrations (67)
+- [<img src="./assets/workflow.svg" width="16" height="16" style="vertical-align: middle;"> Workflow & Automation](#-workflow--automation) - Visual programming platforms (12)
 - [<img src="./assets/plug.svg" width="16" height="16" style="vertical-align: middle;"> API & Proxies](#-api--proxies) - LLM gateways and aggregators (9)
 - [<img src="./assets/audio-lines.svg" width="16" height="16" style="vertical-align: middle;"> Audio & Speech](#-audio--speech) - TTS and STT services (4)
 - [<img src="./assets/terminal.svg" width="16" height="16" style="vertical-align: middle;"> CLI Tools](#-cli-tools) - Terminal-based LLM tools (15)
@@ -215,6 +215,11 @@ A high-throughput and memory-efficient inference and serving engine for LLMs
 
 Companion services, research tools, and integrations that enhance LLM workflows.
 
+#### **[Activepieces](https://github.com/activepieces/activepieces)**<br>
+<img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 83% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 20.2k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 2.6k (262 open, 2.3k closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-04<br>
+<a href="https://github.com/activepieces/activepieces"><img src="https://img.shields.io/github/v/release/activepieces/activepieces?style=flat&label=release&color=7d8590" alt="activepieces/activepieces release"></a> <a href="https://github.com/activepieces/activepieces"><img src="https://img.shields.io/github/license/activepieces/activepieces?style=flat&label=license&color=7d8590" alt="activepieces/activepieces license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/Workflows-000000?style=flat" alt="Workflows"><br>
+Open-source workflow automation platform with AI capabilities and 200+ app connectors.
+
 #### **[Agent Zero](https://github.com/frdel/agent-zero)**<br>
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 76% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 13.0k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 432 (111 open, 321 closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2025-12-29<br>
 <a href="https://github.com/frdel/agent-zero"><img src="https://img.shields.io/github/v/release/frdel/agent-zero?style=flat&label=release&color=7d8590" alt="frdel/agent-zero release"></a> <a href="https://github.com/frdel/agent-zero"><img src="https://img.shields.io/github/license/frdel/agent-zero?style=flat&label=license&color=7d8590" alt="frdel/agent-zero license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/RAG-000000?style=flat" alt="RAG"><br>
@@ -264,6 +269,11 @@ A helper service allowing to expose Harbor services over the internet.
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 14% &nbsp; <img src="./assets/star-b1.svg" width="16" height="16" style="vertical-align: middle;"> 118 &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 15 (8 open, 7 closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2025-08-23<br>
 <a href="https://github.com/pgibler/cmdh"><img src="https://img.shields.io/github/v/release/pgibler/cmdh?style=flat&label=release&color=7d8590" alt="pgibler/cmdh release"></a> <a href="https://github.com/pgibler/cmdh"><img src="https://img.shields.io/github/license/pgibler/cmdh?style=flat&label=license&color=7d8590" alt="pgibler/cmdh license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/CLI-000000?style=flat" alt="CLI"><br>
 Create Linux commands from natural language, in the shell.
+
+#### **[DeerFlow](https://github.com/bytedance/deer-flow)**<br>
+<img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 81% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 18.9k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 424 (189 open, 235 closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-01<br>
+<a href="https://github.com/bytedance/deer-flow"><img src="https://img.shields.io/github/v/release/bytedance/deer-flow?style=flat&label=release&color=7d8590" alt="bytedance/deer-flow release"></a> <a href="https://github.com/bytedance/deer-flow"><img src="https://img.shields.io/github/license/bytedance/deer-flow?style=flat&label=license&color=7d8590" alt="bytedance/deer-flow license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/RAG-000000?style=flat" alt="RAG"> <img src="https://img.shields.io/badge/Workflows-000000?style=flat" alt="Workflows"><br>
+Community-driven deep research framework combining LLMs with web search, crawling, and multi-agent workflows for comprehensive research reports.
 
 #### **[Dify](https://github.com/langgenius/dify)**<br>
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 99% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 124.6k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 15.7k (438 open, 15.2k closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-04<br>
@@ -333,7 +343,7 @@ KoboldCpp is an easy-to-use AI text-generation software for GGML and GGUF models
 #### **[Kotaemon](https://github.com/Cinnamon/kotaemon)**<br>
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 20% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 24.8k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 455 (207 open, 248 closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2025-07-02<br>
 <a href="https://github.com/Cinnamon/kotaemon"><img src="https://img.shields.io/github/v/release/Cinnamon/kotaemon?style=flat&label=release&color=7d8590" alt="Cinnamon/kotaemon release"></a> <a href="https://github.com/Cinnamon/kotaemon"><img src="https://img.shields.io/github/license/Cinnamon/kotaemon?style=flat&label=license&color=7d8590" alt="Cinnamon/kotaemon license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/RAG-000000?style=flat" alt="RAG"><br>
-Clean & customizable RAG UI for chatting with your documents (Gradio-based).
+An open-source RAG-based tool for chatting with your documents.
 
 #### **[LangFlow](https://github.com/langflow-ai/langflow)**<br>
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 98% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 142.7k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 3.1k (355 open, 2.7k closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-02<br>
@@ -544,10 +554,20 @@ Open-source developer platform for internal tools, workflows, and UIs with multi
 
 Visual programming, workflow automation, and orchestration platforms for building LLM applications.
 
+#### **[Activepieces](https://github.com/activepieces/activepieces)**<br>
+<img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 83% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 20.2k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 2.6k (262 open, 2.3k closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-04<br>
+<a href="https://github.com/activepieces/activepieces"><img src="https://img.shields.io/github/v/release/activepieces/activepieces?style=flat&label=release&color=7d8590" alt="activepieces/activepieces release"></a> <a href="https://github.com/activepieces/activepieces"><img src="https://img.shields.io/github/license/activepieces/activepieces?style=flat&label=license&color=7d8590" alt="activepieces/activepieces license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/Workflows-000000?style=flat" alt="Workflows"><br>
+Open-source workflow automation platform with AI capabilities and 200+ app connectors.
+
 #### **[ComfyUI](https://github.com/comfyanonymous/ComfyUI)**<br>
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 97% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 99.0k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 7.4k (3.2k open, 4.2k closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-04<br>
 <a href="https://github.com/comfyanonymous/ComfyUI"><img src="https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&label=release&color=7d8590" alt="comfyanonymous/ComfyUI release"></a> <a href="https://github.com/comfyanonymous/ComfyUI"><img src="https://img.shields.io/github/license/comfyanonymous/ComfyUI?style=flat&label=license&color=7d8590" alt="comfyanonymous/ComfyUI license"></a> &nbsp; <img src="https://img.shields.io/badge/Frontend-000000?style=flat" alt="Frontend"> <img src="https://img.shields.io/badge/Workflows-000000?style=flat" alt="Workflows"> <img src="https://img.shields.io/badge/Image-000000?style=flat" alt="Image"><br>
 The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.
+
+#### **[DeerFlow](https://github.com/bytedance/deer-flow)**<br>
+<img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 81% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 18.9k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 424 (189 open, 235 closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-01<br>
+<a href="https://github.com/bytedance/deer-flow"><img src="https://img.shields.io/github/v/release/bytedance/deer-flow?style=flat&label=release&color=7d8590" alt="bytedance/deer-flow release"></a> <a href="https://github.com/bytedance/deer-flow"><img src="https://img.shields.io/github/license/bytedance/deer-flow?style=flat&label=license&color=7d8590" alt="bytedance/deer-flow license"></a> &nbsp; <img src="https://img.shields.io/badge/Satellite-000000?style=flat" alt="Satellite"> <img src="https://img.shields.io/badge/RAG-000000?style=flat" alt="RAG"> <img src="https://img.shields.io/badge/Workflows-000000?style=flat" alt="Workflows"><br>
+Community-driven deep research framework combining LLMs with web search, crawling, and multi-agent workflows for comprehensive research reports.
 
 #### **[Dify](https://github.com/langgenius/dify)**<br>
 <img src="./assets/rocket.svg" width="16" height="16" style="vertical-align: middle;"> 99% &nbsp; <img src="./assets/star-b3.svg" width="16" height="16" style="vertical-align: middle;"> 124.6k &nbsp; <img src="./assets/circle-dot.svg" width="16" height="16" style="vertical-align: middle;"> issues 15.7k (438 open, 15.2k closed) &nbsp; <img src="./assets/git-commit-horizontal.svg" width="16" height="16" style="vertical-align: middle;"> 2026-01-04<br>

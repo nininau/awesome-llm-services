@@ -649,5 +649,19 @@
     "openIssues": 310,
     "totalIssues": 3193,
     "updated_at": "2026-01-04T13:43:53.109Z"
+  },
+  "bytedance/deer-flow": {
+    "stars": 18946,
+    "lastCommit": "2026-01-01",
+    "openIssues": 189,
+    "totalIssues": 424,
+    "updated_at": "2026-01-04T22:37:11.519Z"
+  },
+  "activepieces/activepieces": {
+    "stars": 20210,
+    "lastCommit": "2026-01-04",
+    "openIssues": 262,
+    "totalIssues": 2589,
+    "updated_at": "2026-01-04T22:37:11.564Z"
   }
 }
